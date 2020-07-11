@@ -14,6 +14,8 @@ export class ServersComponent implements OnInit {
 
   // serverName = '';
   serverName = 'Test';
+  serverCreated = false;
+  servers = ['TestServer', 'TestServer 2'];
 
   constructor() { 
     setTimeout(()=>{
@@ -24,6 +26,8 @@ export class ServersComponent implements OnInit {
   }
 
   onCreationServer(){
+    this.serverCreated = true;
+    this.servers.push(this.serverName);
     this.serverCreationStatus = "Server was Created"
   }
 
