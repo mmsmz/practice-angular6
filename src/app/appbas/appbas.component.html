@@ -1,0 +1,19 @@
+<br>
+<button class="btn btn-primary" (click)="onToggleDeatils()">Display</button>
+<p *ngIf="showSecret">Secret Password = tuna</p>
+
+<!-- this only increments  -->
+<div *ngFor="let logItem of log"
+    [ngStyle]="{backgroundColor: logItem >= 5 ? 'blue' : 'transparent'}"
+    [ngClass]="{'white-text': logItem >= 5}">
+    {{logItem}}   
+</div>
+
+
+<!-- this below code give the datetime with an index incremented!! -->
+<div *ngFor="let logItem of log; let i = index"
+    [ngStyle]="{backgroundColor: i  >= 4 ? 'blue' : 'transparent'}"
+    [ngClass]="{'white-text': i >= 4}">
+    {{logItem}}   
+</div>
+
